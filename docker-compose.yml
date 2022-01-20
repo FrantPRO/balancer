@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  balancer:
+    build: ./balancer
+    ports:
+      - "8000:8000"
+  cdn_server:
+    build: ./cdn_server
+    ports:
+      - "9999:9999"
+  origin_server:
+    build: ./origin_server
+    ports:
+      - "8888:8888"
