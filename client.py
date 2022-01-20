@@ -7,16 +7,16 @@ import httpx
 def httpx_request(url, request_qty):
     async def main():
         async with httpx.AsyncClient() as client:
-            for indx in range(1, request_qty + 1):
+            for indx in range(request_qty):
                 res = await client.get(url)
-                print(indx, res.headers['location'])
+                print(indx + 1, res.headers['location'])
 
     asyncio.run(main())
 
 
 if __name__ == '__main__':
-    request_qty = 500
+    request_qty = 10000
     url = 'http://localhost:8000/?video=http://s1.localhost:8888/video/1488/xcg2djHckad.m3u8'
     start_time = time.time()
     httpx_request(url, request_qty)
-    print(time.time() - start_time)
+    print('duration:', round(time.time() - start_time, 2), 'sec')
