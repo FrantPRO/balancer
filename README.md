@@ -13,4 +13,5 @@ or you can send requests yourself to the endpoint http://localhost:8000.
 
 The **client.py** based on the httpx library for async request.
 
-Expected request of type `http://localhost:8000/?video=http://s1.localhost:8888/video/1488/xcg2djHckad.m3u8`
+Expected request of type 
+`http://localhost:8000/?video=http://s1.localhost:8888/video/1488/xcg2djHckad.m3u8`
